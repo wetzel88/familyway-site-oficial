@@ -42,12 +42,52 @@ const ContactForm = () => {
     }
     setLoading(true);
     // Simulate submission
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    toast.success("Obrigado! Em breve retornaremos seu contato.");
-    setForm({ name: "", phone: "", email: "", destination: "" });
-    setDate(undefined);
-  };
+    setLoading(true);
+
+try {
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: form.name,
+      phone: form.phone,
+      email: form.email,
+      destination: form.destination,
+      travelDate: date
+        ? date.toLocaleDateString("pt-BR")
+        : "",
+    }),
+  });
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(result.message);
+  }
+
+  toast.success(
+    "Obrigado! Em breve retornaremos seu contato."
+  );
+
+  setForm({
+    name: "",
+    phone: "",
+    email: "",
+    destination: "",
+  });
+
+  setDate(undefined);
+} catch (error) {
+  console.error(error);
+
+  toast.error(
+    "Não foi possível enviar sua mensagem. Tente novamente."
+  );
+} finally {
+  setLoading(false);
+};
 
   return (
     <section id="contato" className="bg-primary py-20 md:py-28">
