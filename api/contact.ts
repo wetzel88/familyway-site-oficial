@@ -27,13 +27,16 @@ export default async function handler(req: any, res: any) {
       to: "wetzel.88@gmail.com",
       subject: `🌎 Novo lead FamilyWay - ${name}`,
       html: `
-        <div style="font-family: Arial, sans-serif; background:#f6f8fb; padding:40px;">
+        <div style="font-family:Arial,sans-serif;background:#f6f8fb;padding:40px;">
+          
           <div style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e5e7eb;">
-
+            
+            <!-- HEADER -->
             <div style="background:#0F4C81;color:#fff;padding:20px;text-align:center;">
               <h2 style="margin:0;">✈️ Nova solicitação FamilyWay</h2>
             </div>
 
+            <!-- BODY -->
             <div style="padding:24px;">
 
               <p><strong>Nome:</strong> ${name}</p>
@@ -44,16 +47,49 @@ export default async function handler(req: any, res: any) {
 
               <p><strong>E-mail:</strong> ${email}</p>
 
-              <p><strong>Destino:</strong> ${
-                destination || "Não informado"
-              }</p>
+              <p><strong>Destino:</strong> ${destination || "Não informado"}</p>
 
-              <p><strong>Data da viagem:</strong> ${
-                travelDate || "Não informada"
-              }</p>
+              <p><strong>Data da viagem:</strong> ${travelDate || "Não informada"}</p>
+
+              <!-- BOTÕES -->
+              <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+
+                <!-- RESPONDER EMAIL -->
+                <a href="mailto:${email}?subject=Resposta FamilyWay"
+                   style="
+                    display:inline-block;
+                    background:#0F4C81;
+                    color:#fff;
+                    padding:12px 16px;
+                    border-radius:8px;
+                    text-decoration:none;
+                    font-weight:bold;
+                    text-align:center;
+                   ">
+                  ✉️ Responder cliente
+                </a>
+
+                <!-- WHATSAPP -->
+                <a href="https://wa.me/${(dialCode || "").replace("+", "")}${phone.replace(/\D/g, "")}"
+                   target="_blank"
+                   style="
+                    display:inline-block;
+                    background:#25D366;
+                    color:#fff;
+                    padding:12px 16px;
+                    border-radius:8px;
+                    text-decoration:none;
+                    font-weight:bold;
+                    text-align:center;
+                   ">
+                  💬 Abrir WhatsApp
+                </a>
+
+              </div>
 
             </div>
 
+            <!-- FOOTER -->
             <div style="background:#f1f5f9;padding:16px;text-align:center;font-size:12px;color:#64748b;">
               Enviado automaticamente pelo site FamilyWay
             </div>
