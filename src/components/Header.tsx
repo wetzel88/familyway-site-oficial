@@ -64,9 +64,14 @@ const Header = () => {
         <nav className="md:hidden bg-white border-t border-border px-4 pb-6 animate-fade-in-up">
           {navItems.map((item) => (
             <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setMobileOpen(false)}
+              key={item.label}
+              href={item.href === "top" ? "#" : item.href}
+              onClick={(e) => {setMobileOpen(false);
+                if (item.href === "top") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth"});
+                }
+              }}
               className="block py-3 text-foreground/80 hover:text-foreground transition-colors font-medium"
             >
               {item.label}
