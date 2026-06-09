@@ -52,12 +52,14 @@ try {
     body: JSON.stringify({
       name: form.name,
       phone: form.phone,
+      country: selectedCountry.name,
+      dialCode: selectedCountry.dial,
       email: form.email,
       destination: form.destination,
       travelDate: date
         ? date.toLocaleDateString("pt-BR")
         : "",
-    }),
+      }),
   });
 
   const result = await response.json();
