@@ -40,7 +40,6 @@ const ContactForm = () => {
       toast.error("Por favor, preencha todos os campos obrigatórios.");
       return;
     }
-    setLoading(true);
     // Simulate submission
     setLoading(true);
 
@@ -87,7 +86,9 @@ try {
   );
 } finally {
   setLoading(false);
+}
 };
+
 
   return (
     <section id="contato" className="bg-primary py-20 md:py-28">
