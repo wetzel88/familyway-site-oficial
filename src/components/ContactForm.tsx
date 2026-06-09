@@ -191,7 +191,7 @@ try {
               <Input
                 value={form.destination}
                 onChange={(e) => setForm({ ...form, destination: e.target.value })}
-                placeholder="Ex: Orlando, Lisboa, Tóquio..."
+                placeholder="Ex: Paris, Lisboa, Rio de Janeiro, Maceió..."
                 className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40"
                 maxLength={200}
               />

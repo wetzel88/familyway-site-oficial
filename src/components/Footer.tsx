@@ -48,10 +48,10 @@ const Footer = () => (
         contato@familyway.tur.br
         </p>
         <p className="text-muted-foreground text-sm">
-        WhatsApp: +55 47 99151-8026
+        WhatsApp: +55 47 99151-8026  |  +55 47 98887-1956
         </p>
         <p className="text-accent text-l font-bold mt-4">
-        Atendimento online para todo o Brasil e exterior.
+        Atendimento online para todo o Brasil e Exterior.
         </p>        
         <p className="text-muted-foreground text-sm mt-4">
           ©2026 FamilyWay. Todos os direitos reservados.
