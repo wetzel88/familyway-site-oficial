@@ -1,5 +1,7 @@
-import { Instagram, Facebook, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
+import instagramIcon from "@/assets/instagram.svg";
+import whatsappIcon from "@/assets/whatsapp.svg"
 
 const Footer = () => (
   <footer className="bg-white py-12 border-t border-border">
@@ -25,16 +27,34 @@ const Footer = () => (
         </nav>
 
         <div className="flex gap-4">
-          <a href="#" className="text-foreground/60 hover:text-accent transition-colors" aria-label="Instagram">
-            <Instagram size={22} />
+           <a
+            href="https://instagram.com/familyway.tur"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="text-foreground/60 hover:text-accent transition-colors"
+             aria-label="Instagram"
+            >
+            <img
+              src={instagramIcon}
+              alt="Instagram"
+              className="w-5 h-5 transition-all duration-300 hover:opacity-70"
+            />
           </a>
-          <a href="#" className="text-foreground/60 hover:text-accent transition-colors" aria-label="Facebook">
-            <Facebook size={22} />
-          </a>
-          <a href="#" className="text-foreground/60 hover:text-accent transition-colors" aria-label="WhatsApp">
-            <MessageCircle size={22} />
-          </a>
-        </div>
+
+            <a
+              href="https://wa.me/5547991518026?text=Olá! Vim pelo site da FamilyWay."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/60 hover:text-accent transition-colors"
+              aria-label="WhatsApp"
+              >
+              <img
+                src={whatsappIcon}
+                alt="Whatsapp"
+                className="w-5 h-5 transition-all duration-300 hover:opacity-70"
+              />
+  </a>
+</div>
       </div>
 
       <div className="border-t border-border mt-8 pt-6 text-center">
@@ -42,16 +62,41 @@ const Footer = () => (
         FamilyWay — Agência de Viagens
         </p>
         <p className="text-muted-foreground text-sm">
-        CNPJ: XX.XXX.XXX/0001-XX
+        CNPJ: 67.237.474/0001-22
         </p>
         <p className="text-muted-foreground text-sm font-bold">
-        contato@familyway.tur.br
+          <a
+            href="mailto:contato@familyway.tur.br"
+            className="hover:text-accent transition-colors"
+          >
+            contato@familyway.tur.br
+          </a>
         </p>
         <p className="text-muted-foreground text-sm">
-        WhatsApp: +55 47 99151-8026  |  +55 47 98887-1956
-        </p>
+            WhatsApp:
+            {" "}
+            <a
+              href="https://wa.me/5547991518026"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent"
+            >
+              +55 47 99151-8026
+            </a>
+
+            {" | "}
+
+            <a
+              href="https://wa.me/5547988871956"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent"
+            >
+              +55 47 98887-1956
+            </a>
+          </p>
         <p className="text-accent text-l font-bold mt-4">
-        Atendimento online para todo o Brasil e Exterior.
+        Atendimento online para clientes no Brasil e no exterior.
         </p>        
         <p className="text-muted-foreground text-sm mt-4">
           ©2026 FamilyWay. Todos os direitos reservados.

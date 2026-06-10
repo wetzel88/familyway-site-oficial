@@ -19,11 +19,15 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4 transition-all duration-500">
         <a href="#inicio">
-          <img
-            src={logo}
-            alt="FamilyWay"
-            className={"w-auto h-20"}
-          />
+            <img
+              src={logo}
+              alt="FamilyWay"
+              className="w-auto h-20 cursor-pointer"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                setMobileOpen(false); // importante para fechar menu no mobile
+              }}
+            />
         </a>
 
         {/* Desktop nav */}

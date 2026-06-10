@@ -49,8 +49,7 @@ const WhatsAppFloat = () => {
           rel="noopener noreferrer"
           className="
             bg-[#F97316]
-            hover:bg-[#EA580C]
-            text-[#0F4C81]
+            hover:bg-green-500 text-white
             w-14 h-14 md:w-16 md:h-16
             rounded-full
             flex items-center justify-center
