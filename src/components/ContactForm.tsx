@@ -69,7 +69,7 @@ try {
   }
 
   toast.success(
-    "Obrigado! Em breve retornaremos seu contato."
+    "Recebemos sua solicitação! Retornaremos em até 24 horas úteis."
   );
 
   setForm({
