@@ -35,12 +35,12 @@ const WhatsAppFloat = () => {
         <span className="
           hidden md:block
           absolute right-16 bottom-3
-          bg-black text-white text-xs
+          bg-white text-[#0F4C81] text-xs
           px-3 py-1 rounded-md
           opacity-0 group-hover:opacity-100
           transition-opacity whitespace-nowrap
         ">
-          Fale com a FamilyWay
+          Fale com a FamilyWay no WhatsApp
         </span>
 
         <a
@@ -48,8 +48,9 @@ const WhatsAppFloat = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="
-            bg-green-500 hover:bg-green-600
-            text-white
+            bg-[#F97316]
+            hover:bg-[#EA580C]
+            text-[#0F4C81]
             w-14 h-14 md:w-16 md:h-16
             rounded-full
             flex items-center justify-center
