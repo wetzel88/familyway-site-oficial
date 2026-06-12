@@ -100,44 +100,13 @@ export default async function handler(req: any, res: any) {
       `,
     });
 
-    await resend.emails.send({
-  from: "FamilyWay <contato@familyway.tur.br>",
-  to: email,
-  subject: "Recebemos sua solicitação ✈️",
-  html: `
-    <div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+   await resend.emails.send({
+from: "FamilyWay contato@familyway.tur.br",
+to: email,
+subject: "Recebemos sua solicitação ✈️",
+html: `
 
-      <div style="background:#0F4C81;color:#ffffff;padding:24px;text-align:center;">
-        <h2 style="margin:0;">Obrigado pelo contato!</h2>
-      </div>
-
-      <div style="padding:32px;color:#334155;line-height:1.7;">
-
-        <p>Olá <strong>${name}</strong>,</p>
-
-        <p>
-          Recebemos sua solicitação através do site da FamilyWay.
-        </p>
-
-        <p>
-          Nossa equipe analisará as informações enviadas e retornará o contato o mais breve possível.
-        </p>
-
-        <p>
-          Enquanto isso, fique à vontade para responder este e-mail ou falar conosco pelo WhatsApp caso tenha alguma dúvida adicional.
-        </p>
-
-        <p style="margin-top:32px;">
-          ✈️ <strong>Você viaja. Nossa família cuida.</strong>
-        </p>
-
-      </div>
-
-      <div style="background:#f8fafc;padding:20px;text-align:center;font-size:12px;color:#64748b;">
-        FamilyWay — Atendimento online para Brasil e Exterior
-      </div>
-
-    </div>
+<div style="background:#0F4C81;padding:30px;text-align:center;"> <h1 style="margin:0;color:#ffffff;font-size:24px;"> Recebemos sua solicitação ✈️ </h1> </div> <div style="padding:40px 30px;color:#334155;line-height:1.7;"> <p style="margin-top:0;"> Olá <strong>${name}</strong>, </p> <p> Muito obrigado por entrar em contato com a FamilyWay. </p> <p> Recebemos sua solicitação com sucesso e em breve retornaremos para entender melhor seus planos e ajudar a construir a viagem ideal para você. </p> <p> Enquanto isso, caso prefira agilizar o atendimento, você também pode falar diretamente conosco pelo WhatsApp. </p> <div style="text-align:center;margin:35px 0;"> <a href="https://wa.me/5547991518026" style=" background:#F97316; color:#0F4C81; text-decoration:none; padding:14px 30px; border-radius:999px; font-weight:bold; font-size:16px; display:inline-block; " > 💬 Conversar pelo WhatsApp </a> </div> <div style="text-align:center;margin-top:40px;"> <img src="https://familyway.tur.br/logo-email.png" alt="FamilyWay" style=" width:220px; max-width:80%; height:auto; display:block; margin:0 auto; " /> </div> <p style=" text-align:center; color:#0F4C81; font-size:20px; font-weight:bold; margin-top:20px; margin-bottom:0; " > Você viaja. Nossa família cuida. </p> </div> <div style=" background:#f8fafc; border-top:1px solid #e2e8f0; padding:24px; text-align:center; " > <p style="margin:0;color:#64748b;font-size:14px;"> Atendimento online para clientes no Brasil e no exterior. </p> <p style="margin:10px 0 0 0;color:#64748b;font-size:14px;"> ✉️ contato@familyway.tur.br </p> <p style="margin:10px 0 0 0;"> <a href="https://instagram.com/familyway.tur" style=" color:#F97316; text-decoration:none; font-weight:bold; " > 📷 @familyway.tur </a> </p> </div>
   `,
 });
 
