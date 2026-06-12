@@ -213,7 +213,7 @@ export default async function handler(req, res) {
       </p>
 
       <p style="margin:10px 0 0 0;color:#64748b;font-size:14px;">
-        ✉️ contato@familyway.tur.br
+        E-mail: contato@familyway.tur.br
       </p>
 
       <p style="margin:10px 0 0 0;">
@@ -225,7 +225,7 @@ export default async function handler(req, res) {
             font-weight:bold;
           "
         >
-          📷 @familyway.tur
+          Instagram: @familyway.tur
         </a>
       </p>
 
