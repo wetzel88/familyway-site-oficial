@@ -24,7 +24,7 @@ export default async function handler(req: any, res: any) {
   try {
     await resend.emails.send({
       from: "FamilyWay <contato@familyway.tur.br>",
-      to: "wetzel.88@gmail.com",
+      to: "contato@familyway.tur.br",
       replyTo: email,
       subject: `🌎 Novo lead FamilyWay - ${name}`,
       html: `
