@@ -23,8 +23,9 @@ export default async function handler(req: any, res: any) {
 
   try {
     await resend.emails.send({
-      from: "FamilyWay <onboarding@resend.dev>",
+      from: "FamilyWay <contato@familyway.tur.br>",
       to: "wetzel.88@gmail.com",
+      replyTo: email,
       subject: `🌎 Novo lead FamilyWay - ${name}`,
       html: `
         <div style="font-family:Arial,sans-serif;background:#f6f8fb;padding:40px;">
@@ -98,6 +99,47 @@ export default async function handler(req: any, res: any) {
         </div>
       `,
     });
+
+    await resend.emails.send({
+  from: "FamilyWay <contato@familyway.tur.br>",
+  to: email,
+  subject: "Recebemos sua solicitação ✈️",
+  html: `
+    <div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+
+      <div style="background:#0F4C81;color:#ffffff;padding:24px;text-align:center;">
+        <h2 style="margin:0;">Obrigado pelo contato!</h2>
+      </div>
+
+      <div style="padding:32px;color:#334155;line-height:1.7;">
+
+        <p>Olá <strong>${name}</strong>,</p>
+
+        <p>
+          Recebemos sua solicitação através do site da FamilyWay.
+        </p>
+
+        <p>
+          Nossa equipe analisará as informações enviadas e retornará o contato o mais breve possível.
+        </p>
+
+        <p>
+          Enquanto isso, fique à vontade para responder este e-mail ou falar conosco pelo WhatsApp caso tenha alguma dúvida adicional.
+        </p>
+
+        <p style="margin-top:32px;">
+          ✈️ <strong>Você viaja. Nossa família cuida.</strong>
+        </p>
+
+      </div>
+
+      <div style="background:#f8fafc;padding:20px;text-align:center;font-size:12px;color:#64748b;">
+        FamilyWay — Atendimento online para Brasil e Exterior
+      </div>
+
+    </div>
+  `,
+});
 
     return res.status(200).json({ ok: true });
   } catch (error) {
