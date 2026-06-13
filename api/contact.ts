@@ -155,7 +155,7 @@ export default async function handler(req, res) {
           href="https://wa.me/5547991518026"
           style="
             background:#F97316;
-            color:#000000;
+            color:#FFFFFF;
             text-decoration:none;
             padding:14px 30px;
             border-radius:999px;
